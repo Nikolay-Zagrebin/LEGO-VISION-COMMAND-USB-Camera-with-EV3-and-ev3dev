@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-#from collections import deque
 import cv2
 from LVC_Camera import LegoVisionCommandCamera
 
@@ -16,7 +15,7 @@ class TrackingObject(object):
     def gen_frame(self):
         # define the lower and upper boundaries of the "red object" in the HSV color space, then initialize the list of tracked points
         colorLower = (0, 100, 100)
-        colorUpper = (5, 255, 255)
+        colorUpper = (10, 255, 255)
         
         # grab the current frame
         np_data = next(self.read_task)
@@ -49,6 +48,5 @@ class TrackingObject(object):
 
         _, jpeg = cv2.imencode('.jpg', frame)
         return jpeg.tobytes()
-        # save the frame
+        
         # cv2.imwrite('test.jpg', frame)
-        #gh = False
