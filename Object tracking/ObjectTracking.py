@@ -7,10 +7,9 @@ class TrackingObject(object):
     def __init__(self):
         self.camera = LegoVisionCommandCamera('/dev/video0')
         self.camera.start_capturing()
-        self.read_task = self.camera.read()
 
     def __del__(self):
-        self.camera.close_device()
+        del self.camera
 
     def gen_frame(self):
         # define the lower and upper boundaries of the "red object" in the HSV color space, then initialize the list of tracked points
@@ -18,8 +17,7 @@ class TrackingObject(object):
         colorUpper = (10, 255, 255)
         
         # grab the current frame
-        np_data = next(self.read_task)
-        frame = cv2.cvtColor(np_data, cv2.COLOR_BayerGR2RGB)
+        frame = cv2.cvtColor(self.camera.read(), cv2.COLOR_BayerGR2RGB)
     
         hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
  
