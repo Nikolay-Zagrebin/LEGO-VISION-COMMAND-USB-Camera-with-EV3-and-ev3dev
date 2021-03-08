@@ -66,7 +66,7 @@ class MonitorButton(Thread):
             if self.shutdown_event.is_set():
                 break
 
-            sleep(0.05)
+            sleep(0.1)
 
 class LegoVisionCommandCamera(object):
     def __init__(self, device_name):
