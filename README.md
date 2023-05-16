@@ -25,6 +25,7 @@ deb http://archive.debian.org/debian-security/ stretch/updates main contrib non-
 Для работы необходимо установить numpy, v4l2, cv2 и flask.
 
 sudo apt-get update
+
 sudo apt-get upgrade
 
 sudo apt-get install python3-numpy
