@@ -1,9 +1,23 @@
 # LEGO-VISION-COMMAND-USB-Camera-with-EV3-and-ev3dev
 Эксперименты с камерой LEGO VISION COMMAND.
 
-Для работы необходимо установить numpy, v4l2, cv2.
+Добавить архивный репозиторий, т.к. Дебиан с 2022 года, перевела подедржку 9 го релиза в архив
+
+sudo nano /etc/apt/sources.list
+Вместо
+deb http://httpredir.debian.org/debian stretch main contrib non-free 
+Добавляем строку
+deb http://archive.debian.org/debian stretch main contrib non-free
+Вместо
+deb http://security.debian.org/ stretch/updates main contrib non-free
+Добавляем строку
+deb http://archive.debian.org/debian-security/ stretch/updates main contrib non-free
+
+
+Для работы необходимо установить numpy, v4l2, cv2 и flask.
 
 sudo apt-get update
+sudo apt-get upgrade
 
 sudo apt-get install python3-numpy
 
