@@ -4,6 +4,7 @@
 Добавить архивный репозиторий, т.к. Дебиан с 2022 года, перевела подедржку 9 го релиза в архив
 
 sudo nano /etc/apt/sources.list
+
 Вместо
 
 deb http://httpredir.debian.org/debian stretch main contrib non-free
