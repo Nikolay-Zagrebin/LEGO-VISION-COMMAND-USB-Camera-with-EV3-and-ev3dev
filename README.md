@@ -5,12 +5,19 @@
 
 sudo nano /etc/apt/sources.list
 Вместо
-deb http://httpredir.debian.org/debian stretch main contrib non-free 
+
+deb http://httpredir.debian.org/debian stretch main contrib non-free
+
 Добавляем строку
+
 deb http://archive.debian.org/debian stretch main contrib non-free
+
 Вместо
+
 deb http://security.debian.org/ stretch/updates main contrib non-free
+
 Добавляем строку
+
 deb http://archive.debian.org/debian-security/ stretch/updates main contrib non-free
 
 
