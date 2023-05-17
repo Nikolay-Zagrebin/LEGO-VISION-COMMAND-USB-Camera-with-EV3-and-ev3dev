@@ -1,0 +1,8 @@
+При импорте библиотеки, возникает ошибка
+
+import v4l2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/local/lib/python3.5/dist-packages/v4l2.py", line 197, in <module>
+    ) = range(1, 9) + [0x80]
+TypeError: unsupported operand type(s) for +: 'range' and 'list'
