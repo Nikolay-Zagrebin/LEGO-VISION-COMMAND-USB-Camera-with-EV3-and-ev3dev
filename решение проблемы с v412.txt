@@ -6,3 +6,9 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.5/dist-packages/v4l2.py", line 197, in <module>
     ) = range(1, 9) + [0x80]
 TypeError: unsupported operand type(s) for +: 'range' and 'list'
+
+Решение.
+дополняем строку 
+    ) = range(1, 9) + [0x80]
+преобразованием в список
+    ) = list(range(1, 9)) + [0x80]
